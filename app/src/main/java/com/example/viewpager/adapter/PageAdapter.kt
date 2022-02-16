@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.viewpager.models.Component
 import com.example.viewpager.ui.*
 
-class PageAdapter(fm: FragmentManager, private val component: Component?) : FragmentStatePagerAdapter(fm) {
+class PageAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
     override fun getCount(): Int {
         return 5
     }
