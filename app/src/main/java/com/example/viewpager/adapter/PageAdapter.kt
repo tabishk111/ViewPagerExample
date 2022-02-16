@@ -3,7 +3,7 @@ package com.example.viewpager.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.example.viewpager.models.Component
+import com.example.viewpager.models.Message
 import com.example.viewpager.ui.*
 
 class PageAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {

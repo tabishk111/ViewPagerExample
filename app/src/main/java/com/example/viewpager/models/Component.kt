@@ -1,67 +1,56 @@
 package com.example.viewpager.models
 
-// To parse the JSON, install kotlin's serialization plugin and do:
-//
-// val json    = Json(JsonConfiguration.Stable)
-// val welcome = json.parse(Welcome.serializer(), jsonString)
+import com.google.gson.JsonArray
+import com.google.gson.annotations.SerializedName
 
-import kotlinx.serialization.*
-import kotlinx.serialization.json.*
-import kotlinx.serialization.descriptors.*
-import kotlinx.serialization.encoding.*
-
-@Serializable
 data class Component (
-    val message: Message,
-    val status: Boolean
+    val message: Message? = null,
+    val status: Boolean? = null
 )
 
-@Serializable
 data class Message (
-    @SerialName("Trending Technology")
-    val trendingTechnology: List<HealthFitness>,
+    @SerializedName("Trending Technology")
+    val trendingTechnology: List<HealthFitness>? = null,
 
-    @SerialName("Trending News")
-    val trendingNews: List<HealthFitness>,
+    @SerializedName("Trending News")
+    val trendingNews: List<HealthFitness>? = null,
 
-    @SerialName("Entertainment")
-    val entertainment: JsonArray,
+    @SerializedName("Entertainment")
+    val entertainment: List<Any?>? = null,
 
-    @SerialName("Health & Fitness")
-    val healthFitness: List<HealthFitness>,
+    @SerializedName("Health & Fitness")
+    val healthFitness: List<HealthFitness>? = null,
 
-    @SerialName("Knowledge & Careers")
-    val knowledgeCareers: List<HealthFitness>
+    @SerializedName("Knowledge & Careers")
+    val knowledgeCareers: List<HealthFitness>? = null
 )
 
-@Serializable
 data class HealthFitness (
-    @SerialName("_id")
-    val id: String,
+    @SerializedName("_id")
+    val id: String? = null,
 
-    val profile: Profile,
-    val title: String,
-    val description: String,
-    val thumbnail: String,
-    val duration: String,
-    val category: String,
+    val profile: Profile? = null,
+    val title: String? = null,
+    val description: String? = null,
+    val thumbnail: String? = null,
+    val duration: String? = null,
+    val category: String? = null,
 
-    @SerialName("upload_file")
-    val uploadFile: String,
+    @SerializedName("upload_file")
+    val uploadFile: String? = null,
 
-    val timestamp: Double
+    val timestamp: Double? = null
 )
 
-@Serializable
 data class Profile (
-    @SerialName("_id")
-    val id: String,
+    @SerializedName("_id")
+    val id: String? = null,
 
-    val name: String,
+    val name: String? = null,
 
-    @SerialName("channel_name")
-    val channelName: String,
+    @SerializedName("channel_name")
+    val channelName: String? = null,
 
-    @SerialName("profile_picture")
-    val profilePicture: String
+    @SerializedName("profile_picture")
+    val profilePicture: String? = null
 )
